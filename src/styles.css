@@ -1,0 +1,201 @@
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px; /* 50% */
+  }
+}
+
+body {
+  font-family: inter;
+}
+
+input.input-window {
+  text-align: center;
+  margin: 50px 10px 20px 0px;
+  opacity: 0.3;
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: none;
+  width: 400px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1em 1em 10px rgba(255, 255, 255, 0.045);
+  font-size: 20px;
+}
+
+form {
+  display: inline;
+}
+h1 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-indent: 250px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+h3 {
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: center;
+  text-indent: 250px;
+  font-weight: 100;
+}
+
+h4 {
+  color: white;
+  line-height: 5px;
+  font-weight: 50;
+  font-size: 20px;
+  text-align: center;
+  text-indent: 250px;
+}
+
+h5 {
+  color: white;
+  font-size: 30px;
+}
+
+h6 {
+  color: white;
+  opacity: 0.6;
+  font-size: 15px;
+  letter-spacing: 13px;
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-top: 50px;
+}
+
+li {
+  list-style: none;
+}
+
+li.labels {
+  color: rgb(224, 224, 224);
+  opacity: 0.7;
+  font-size: 25px;
+  text-indent: 100px;
+  font-weight: 100;
+}
+
+.main-data-line {
+  margin-bottom: 50px;
+}
+
+.current-city {
+  background: none;
+  color: rgba(255, 255, 255, 0.332);
+  border: 1px solid rgba(255, 255, 255, 0.168);
+  padding: 15px 20px;
+  border-radius: 20px;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1em 1em 10px rgba(255, 255, 255, 0.045);
+  font-size: 20px;
+}
+.details-today {
+  font-size: 40px;
+  color: white;
+  text-indent: 200px;
+  margin-bottom: 50px;
+}
+
+.main-info {
+  padding-left: 200px;
+}
+.sun-icon {
+  font-size: 150px;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.description {
+  color: white;
+  opacity: 0.6;
+  line-height: 10px;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.city {
+  font-size: 50px;
+  color: white;
+  margin-top: 70px;
+}
+
+.degrees {
+  font-size: 90px;
+  color: white;
+  margin-top: 20px;
+}
+
+.fahrenheit {
+  text-decoration: none;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.fahrenheit:hover {
+  color: rgba(255, 255, 255, 0.618);
+  font-size: smaller;
+}
+
+.celsius {
+  text-decoration: none;
+  color: white;
+  transition: all 200ms ease-in-out;
+}
+
+.celsius:hover {
+  color: rgba(255, 255, 255, 0.618);
+  font-size: smaller;
+}
+
+.forecast-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1em 1em 10px rgba(255, 255, 255, 0.045);
+  padding: 15px 0px;
+}
+
+.forecast-icon {
+  font-size: 60px;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.forecast-degrees {
+  font-size: 40px;
+  color: white;
+}
+.forecast-line {
+  margin: 50px 120px 0px 120px;
+}
+
+.sun-icon-two {
+  opacity: 0.7;
+  font-size: 70px;
+  width: 100%;
+}
