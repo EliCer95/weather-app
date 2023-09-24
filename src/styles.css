@@ -119,10 +119,8 @@ li.labels {
   padding-left: 200px;
 }
 
-.sun-icon {
-  font-size: 150px;
-  opacity: 0.6;
-  width: 100%;
+img.sun-icon {
+  size: 700px;
 }
 
 .description {

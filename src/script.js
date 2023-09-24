@@ -43,14 +43,17 @@ function formatTime(time) {
 }
 
 function showWeather(response) {
-  console.log(response);
   document
     .querySelector("#icon")
     .setAttribute(
       "src",
-      "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
     );
   document.querySelector("#city-name").innerHTML = response.data.city;
+
+  if (response.data.city === "New York County") {
+    document.querySelector("#city-name").innerHTML = "New York";
+  }
 
   document.querySelector("#weather-unit").innerHTML = Math.round(
     response.data.temperature.current
@@ -70,7 +73,6 @@ function search(city) {
   let apiKey = "2f2ob3ct1704051a7e5075a8a7ec2a7e";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
-  console.log(apiUrl);
 }
 
 function searchCity(event) {
