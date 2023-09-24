@@ -92,18 +92,15 @@ function handleClick() {
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let weatherUnit = document.querySelector("#weather-unit");
-  let unit = weatherUnit.innerHTML;
-  unit = Number(unit);
-  weatherUnit.innerHTML = Math.round(((unit - 32) * 5) / 9);
+  let temperatureElement = document.querySelector("#weather-unit");
+  temperatureElement.innerHTML = celsiusTemperature;
 }
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let weatherUnit = document.querySelector("#weather-unit");
-  let unit = weatherUnit.innerHTML;
-  unit = Number(unit);
-  weatherUnit.innerHTML = Math.round((unit * 9) / 5 + 32);
+  let temperatureElement = document.querySelector("#weather-unit");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let now = new Date();
