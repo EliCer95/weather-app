@@ -42,6 +42,31 @@ function formatTime(time) {
   return `${hour}:${minute}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col-3 d-flex justify-content-center">
+    <div class="card text-center mb-3 forecast-card" style="width: 18rem">
+        <h5 class="next-day">Tomorrow</h5>
+          <img 
+          src="https://openweathermap.org/img/wn/10d@2x.png" 
+          alt="icon"
+          class="forecast-icon"/>
+        <div>
+          <span class="max-temp">
+            <strong>18°C</strong>
+          </span>
+          <span class="min-temp">15°C</span>
+        </div>
+    </div>
+  </div>
+</div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   let iconElement = document.querySelector("#icon");
   let cityElement = document.querySelector("#city-name");
@@ -124,3 +149,4 @@ let celsius = document.querySelector("#celsius-unit");
 celsius.addEventListener("click", convertToCelsius);
 
 search("San Francisco");
+displayForecast();
