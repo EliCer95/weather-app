@@ -98,17 +98,12 @@ li.labels {
   font-weight: 100;
 }
 
-.main-data-line {
-  margin-bottom: 50px;
-}
-
 .current-city {
   background: none;
   color: rgba(255, 255, 255, 0.332);
   border: 1px solid rgba(255, 255, 255, 0.168);
   padding: 15px 20px;
   border-radius: 20px;
-
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   box-shadow: inset 1em 1em 10px rgba(255, 255, 255, 0.045);
   font-size: 20px;
@@ -140,13 +135,20 @@ li.labels {
 .city {
   font-size: 50px;
   color: white;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .degrees {
-  font-size: 90px;
+  font-size: 150px;
   color: white;
   margin-top: 20px;
+}
+
+.units {
+  position: relative;
+  font-size: 40px;
+  top: -78px;
+  color: white;
 }
 
 .fahrenheit {
@@ -191,11 +193,18 @@ li.labels {
   color: white;
 }
 .forecast-line {
-  margin: 50px 120px 0px 120px;
+  margin: 20px 120px 0px 120px;
 }
 
 .sun-icon-two {
   opacity: 0.7;
   font-size: 70px;
   width: 100%;
+}
+
+.footnote {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  letter-spacing: 10px;
 }
