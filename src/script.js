@@ -44,10 +44,12 @@ function formatTime(time) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `<div class="col-3 d-flex justify-content-center">
+  let days = ["Tuesday", "Wedensday", "Thursday", "Friday"];
+  forecastHTML = "";
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-3 d-flex justify-content-center">
     <div class="card text-center mb-3 forecast-card" style="width: 18rem">
         <h5 class="next-day">Tomorrow</h5>
           <img 
@@ -63,7 +65,7 @@ function displayForecast() {
     </div>
   </div>
 </div>`;
-  forecastHTML = forecastHTML + `</div>`;
+  });
   forecastElement.innerHTML = forecastHTML;
 }
 
@@ -95,7 +97,6 @@ function search(city) {
   let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
-  console.log(apiUrl);
 }
 
 function searchCity(event) {
