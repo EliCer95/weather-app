@@ -43,14 +43,22 @@ function formatTime(time) {
 }
 
 function showWeather(response) {
-  document.querySelector("#city-name").innerHTML = response.data.name;
+  console.log(response);
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png"
+    );
+  document.querySelector("#city-name").innerHTML = response.data.city;
+
   document.querySelector("#weather-unit").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
   document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
+    response.data.condition.description;
   document.querySelector("#humidity").innerHTML = Math.round(
-    response.data.main.humidity
+    response.data.temperature.humidity
   );
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
@@ -59,8 +67,8 @@ function showWeather(response) {
 
 function search(city) {
   let unit = "metric";
-  let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  let apiKey = "2f2ob3ct1704051a7e5075a8a7ec2a7e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
   console.log(apiUrl);
 }
@@ -75,8 +83,8 @@ function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let unit = "metric";
-  let apiKey = "5af297a6d7993b7bb3c2ec51eeeaccd4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+  let apiKey = "2f2ob3ct1704051a7e5075a8a7ec2a7e";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showWeather);
 }
 
