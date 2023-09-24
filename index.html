@@ -47,12 +47,12 @@
       </div>
       <div class="row main-data-line">
         <div class="col-4 main-info">
-          <img src="" alt="icon" id="icon" class="sun-icon" />
+          <img src="" alt="icon" id="icon" class="sun-icon" width="150px" />
           <div class="description" id="weather-description"></div>
           <div class="city" id="city-name"></div>
           <span class="degrees" id="weather-unit"></span>
           <span class="units"
-            ><a href="#" class="celsius" id="celsius-unit">°C</a>/<a
+            ><a href="#" class="celsius active" id="celsius-unit">°C</a>/<a
               href="#"
               class="fahrenheit"
               id="fahrenheit-unit"
@@ -72,11 +72,9 @@
             <li>
               <div class="details-today"><span id="wind-speed"></span>km/h</div>
             </li>
-            <li class="labels">Precipitation:</li>
+            <li class="labels">Feels like:</li>
             <li>
-              <div class="details-today">
-                <span id="precipitation">x</span>mm
-              </div>
+              <div class="details-today"><span id="feels-like"></span>°C</div>
             </li>
           </ul>
         </div>
@@ -91,54 +89,9 @@
               <p class="card-text">
                 <img src="" alt="icon" id="icon" class="sun-icon" />
               </p>
-              <div class="forecast-degrees">
-                <strong>15<span class="celsius">°C</span></strong
-                ><span class="fahrenheit">/°F</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3 d-flex justify-content-center">
-          <div class="card text-center mb-3 forecast-card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="next-day">Tuesday</h5>
-              <h6>19|09|2023</h6>
-              <p class="card-text">
-                <img src="" alt="icon" id="icon" class="sun-icon" />
-              </p>
-              <div class="forecast-degrees">
-                <strong>22<span class="celsius">°C</span></strong
-                ><span class="fahrenheit">/°F</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3 d-flex justify-content-center">
-          <div class="card text-center mb-3 forecast-card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="next-day">Wednesday</h5>
-              <h6>20|09|2023</h6>
-              <p class="card-text">
-                <img src="" alt="icon" id="icon" class="sun-icon" />
-              </p>
-              <div class="forecast-degrees">
-                <strong>18<span class="celsius">°C</span></strong
-                ><span class="fahrenheit">/°F</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-3 d-flex justify-content-center">
-          <div class="card text-center mb-3 forecast-card" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="next-day">Thursday</h5>
-              <h6>21|09|2023</h6>
-              <p class="card-text">
-                <img src="" alt="icon" id="icon" class="sun-icon" />
-              </p>
-              <div class="forecast-degrees">
-                <strong>24<span class="celsius">°C</span></strong
-                ><span class="fahrenheit">/°F</span>
+              <div>
+                <span class="max-temp"><strong>18°C</strong></span
+                >/<span class="min-temp">15°C</span>
               </div>
             </div>
           </div>
