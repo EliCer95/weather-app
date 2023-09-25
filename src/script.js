@@ -57,7 +57,7 @@ function formatDay(timestamp) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wedensday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
