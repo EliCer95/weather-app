@@ -151,19 +151,6 @@ function handleClick() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#weather-unit");
-  temperatureElement.innerHTML = celsiusTemperature;
-}
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#weather-unit");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
 let now = new Date();
 let h3 = document.querySelector("h3");
 h3.innerHTML = formatDate(now);
@@ -174,12 +161,5 @@ let searchInput = document.querySelector("form");
 searchInput.addEventListener("submit", searchCity);
 let current = document.querySelector("#current-city");
 current.addEventListener("click", handleClick);
-
-let celsiusTemperature = null;
-
-let fahrenheit = document.querySelector("#fahrenheit-unit");
-fahrenheit.addEventListener("click", convertToFahrenheit);
-let celsius = document.querySelector("#celsius-unit");
-celsius.addEventListener("click", convertToCelsius);
 
 search("San Francisco");
